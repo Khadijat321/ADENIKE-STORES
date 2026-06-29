@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP WITH ADENIKE STORES | Luxury Unisex Fashion Boutique</title>
+    <meta name="description" content="SHOP WITH ADENIKE STORES - Home of luxury unisex fashion in Lagos. Premium tees, vintage wear, and exclusive boutique collections. Shipping nationwide.">
+    <meta name="keywords" content="Adenike Stores, luxury fashion Lagos, unisex clothing, vintage tees, boutique Lagos, fashion store Ojo">
+    <meta name="author" content="Adenike Stores">
+    <meta property="og:title" content="SHOP WITH ADENIKE STORES | Luxury Unisex Fashion">
+    <meta property="og:description" content="Premium unisex fashion boutique in Lagos. Shop tees, vintage wear & luxury collections.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-crown"></i>
+                <span>ADENIKE</span> STORES
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-icon" onclick="openCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="nav-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-menu-links">
+            <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#shop" onclick="toggleMobileMenu()">Shop</a></li>
+            <li><a href="#categories" onclick="toggleMobileMenu()">Categories</a></li>
+            <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-social">
+            <a href="https://instagram.com/adenike_stores_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/2348066481113" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+2348066481113"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content animate">
+                <div class="hero-badge">
+                    <i class="fas fa-gem"></i>
+                    Luxury Unisex Fashion
+                </div>
+                <h1 class="hero-title">
+                    Elevate Your
+                    <span>Style Game</span>
+                </h1>
+                <p class="hero-desc">
+                    Discover premium unisex fashion at SHOP WITH ADENIKE STORES. 
+                    From vintage tees to luxury streetwear, we curate the finest 
+                    pieces for the modern fashion enthusiast in Lagos and beyond.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shop Now
+                    </a>
+                    <a href="#categories" class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        Explore Collections
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image animate delay-2">
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=700&fit=crop" alt="Luxury Fashion">
+            </div>
+        </div>
+        <div class="hero-stats animate delay-3">
+            <div class="stat-item">
+                <div class="stat-number">2.6K+</div>
+                <div class="stat-label">Followers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Collections</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header animate">
+                <span class="section-tag">Browse Categories</span>
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-desc">Explore our curated collections designed for every style and occasion</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card animate" onclick="filterProducts('tees')">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Tees">
+                    <div class="category-overlay">
+                        <div class="category-name">Premium Tees</div>
+                        <div class="category-count">45 Products</div>
+                    </div>
+                </div>
+                <div class="category-card animate delay-1" onclick="filterProducts('vintage')">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=500&fit=crop" alt="Vintage">
+                    <div class="category-overlay">
+                        <div class="category-name">Vintage Wear</div>
+                        <div class="category-count">32 Products</div>
+                    </div>
+                </div>
+                <div class="category-card animate delay-2" onclick="filterProducts('luxury')">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400&h=500&fit=crop" alt="Luxury">
+                    <div class="category-overlay">
+                        <div class="category-name">Luxury Collection</div>
+                        <div class="category-count">28 Products</div>
+                    </div>
+                </div>
+                <div class="category-card animate delay-3" onclick="filterProducts('streetwear')">
+                    <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=500&fit=crop" alt="Streetwear">
+                    <div class="category-overlay">
+                        <div class="category-name">Streetwear</div>
+                        <div class="category-count">56 Products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="shop">
+        <div class="container">
+            <div class="section-header animate">
+                <span class="section-tag">Our Collection</span>
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-desc">Handpicked pieces from our latest drops and timeless classics</p>
+            </div>
+            <div class="product-filters animate">
+                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" onclick="filterProducts('tees')">Tees</button>
+                <button class="filter-btn" onclick="filterProducts('vintage')">Vintage</button>
+                <button class="filter-btn" onclick="filterProducts('luxury')">Luxury</button>
+                <button class="filter-btn" onclick="filterProducts('streetwear')">Streetwear</button>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header animate">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">The Adenike Experience</h2>
+                <p class="section-desc">We go beyond selling clothes — we deliver an unmatched fashion experience</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-desc">Nationwide shipping within 2-5 business days. Express delivery available for Lagos orders.</p>
+                </div>
+                <div class="feature-card animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Quality</h3>
+                    <p class="feature-desc">Every piece is carefully sourced and quality-checked. Only the best makes it to our store.</p>
+                </div>
+                <div class="feature-card animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3 class="feature-title">Easy Returns</h3>
+                    <p class="feature-desc">Not satisfied? Return within 7 days for a full refund or exchange. No questions asked.</p>
+                </div>
+                <div class="feature-card animate delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-desc">Our team is always available via WhatsApp, Instagram DM, or phone to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images animate">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=500&fit=crop" alt="Adenike Store Interior">
+                    </div>
+                    <div class="about-img-float">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=200&h=200&fit=crop" alt="Fashion Detail">
+                    </div>
+                </div>
+                <div class="about-content animate delay-2">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">Lagos' Premier Fashion Destination</h2>
+                    <p class="about-text">
+                        Founded in the heart of Ojo, Lagos, SHOP WITH ADENIKE STORES has grown from a small 
+                        boutique to one of the most trusted names in Nigerian fashion. We specialize in 
+                        luxury unisex wear, premium vintage tees, and exclusive streetwear collections 
+                        that speak to the bold and stylish.
+                    </p>
+                    <p class="about-text">
+                        With over 2,600 loyal followers on Instagram and a growing community of fashion 
+                        enthusiasts, we pride ourselves on curating pieces that blend international trends 
+                        with local flavor. Every item in our store is handpicked to ensure it meets our 
+                        high standards of quality and style.
+                    </p>
+                    <div class="about-stats-row">
+                        <div class="about-stat">
+                            <div class="about-stat-number">5+</div>
+                            <div class="about-stat-label">Years Active</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">2.6K+</div>
+                            <div class="about-stat-label">Happy Customers</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">500+</div>
+                            <div class="about-stat-label">Products Sold</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header animate">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-desc">Real reviews from real fashion lovers across Nigeria</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animate">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The quality of the vintage tees I ordered exceeded my expectations. 
+                        Fast delivery to Ikeja and the packaging was top-notch. Adenike Stores 
+                        is now my go-to for all my fashion needs!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TO</div>
+                        <div class="author-info">
+                            <h4>Tolu Ogunlesi</h4>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-1">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "I've been shopping here for over a year now. The luxury collection is 
+                        unmatched and their customer service via WhatsApp is incredibly responsive. 
+                        Highly recommend to anyone looking for quality unisex wear."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CA</div>
+                        <div class="author-info">
+                            <h4>Chiamaka Adeleke</h4>
+                            <p>Abuja, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-2">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The streetwear selection is fire! Got my drip for Detty December and 
+                        everyone was asking where I shopped. The round neck t-shirts fit perfectly. 
+                        Will definitely be ordering again soon."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <h4>David Kalu</h4>
+                            <p>Port Harcourt, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content animate">
+                <span class="section-tag">Stay Updated</span>
+                <h2 class="section-title">Join Our Fashion Community</h2>
+                <p class="section-desc">
+                    Subscribe to get exclusive access to new drops, limited editions, 
+                    and special discounts delivered straight to your inbox.
+                </p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <div class="newsletter-trust">
+                    <span><i class="fas fa-lock"></i> No spam, ever</span>
+                    <span><i class="fas fa-times-circle"></i> Unsubscribe anytime</span>
+                    <span><i class="fas fa-gift"></i> Exclusive offers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate">
+                    <span class="section-tag">Get in Touch</span>
+                    <h3>We'd Love to Hear From You</h3>
+                    <p>
+                        Whether you have questions about an order, need styling advice, 
+                        or want to collaborate, our team is here to help. Reach out through 
+                        any of the channels below.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Visit Our Store</h4>
+                                <p>20 Igbo Elerin Rd, Ojo, Lagos 102101, Lagos</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <a href="tel:+2348066481113">0806 648 1113</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/2348066481113" target="_blank">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <a href="https://instagram.com/adenike_stores_" target="_blank">@adenike_stores_</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Mon - Sat: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://instagram.com/adenike_stores_" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2348066481113" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+2348066481113" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form animate delay-2">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.5rem;">Send a Message</h3>
+                    <p style="color: var(--gray); margin-bottom: 2rem;">Fill out the form below and we'll respond within 24 hours.</p>
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+234 800 000 0000">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="How can we help you today?" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM FEED -->
+    <section class="instagram">
+        <div class="container">
+            <div class="instagram-header">
+                <a href="https://instagram.com/adenike_stores_" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    @adenike_stores_
+                </a>
+                <p style="color: rgba(255,255,255,0.5); margin-top: 0.5rem;">Follow us for daily style inspiration</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="Instagram 1">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=300&h=300&fit=crop" alt="Instagram 2">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=300&h=300&fit=crop" alt="Instagram 3">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=300&h=300&fit=crop" alt="Instagram 4">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=300&h=300&fit=crop" alt="Instagram 5">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=300&h=300&fit=crop" alt="Instagram 6">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-crown"></i>
+                        <span>ADENIKE</span> STORES
+                    </a>
+                    <p>
+                        Lagos' premier destination for luxury unisex fashion. 
+                        Curating the finest vintage tees, streetwear, and exclusive 
+                        collections since 2019.
+                    </p>
+                    <div class="contact-social" style="margin-top: 1.5rem;">
+                        <a href="https://instagram.com/adenike_stores_" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2348066481113" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+2348066481113" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop All</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showToast('Shipping policy coming soon!')">Shipping Policy</a></li>
+                        <li><a href="#" onclick="showToast('Return policy coming soon!')">Returns & Exchanges</a></li>
+                        <li><a href="#" onclick="showToast('Size guide coming soon!')">Size Guide</a></li>
+                        <li><a href="#" onclick="showToast('FAQ coming soon!')">FAQ</a></li>
+                        <li><a href="#" onclick="showToast('Privacy policy coming soon!')">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 20 Igbo Elerin Rd, Ojo, Lagos</p>
+                    <p><i class="fas fa-phone"></i> 0806 648 1113</p>
+                    <p><i class="fab fa-instagram"></i> @adenike_stores_</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 5PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>SHOP WITH ADENIKE STORES. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" style="font-size: 2rem; color: rgba(255,255,255,0.6);"></i>
+                    <i class="fab fa-cc-mastercard" style="font-size: 2rem; color: rgba(255,255,255,0.6);"></i>
+                    <span style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">Paystack</span>
+                    <span style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">Flutterwave</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some items to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₦0</span>
+            </div>
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">₦0</span>
+            </div>
+            <button class="checkout-btn" onclick="handleCheckout()">
+                <i class="fas fa-lock"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="quickViewModal" onclick="closeQuickView(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickViewDirect()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-category" id="modalCategory"></div>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <p class="modal-desc" id="modalDesc"></p>
+                    <div class="modal-sizes">
+                        <label>Select Size</label>
+                        <div class="size-options">
+                            <div class="size-option">S</div>
+                            <div class="size-option active">M</div>
+                            <div class="size-option">L</div>
+                            <div class="size-option">XL</div>
+                            <div class="size-option">XXL</div>
+                        </div>
+                    </div>
+                    <button class="modal-add-cart" id="modalAddBtn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+</body>
+</html>
