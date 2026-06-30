@@ -1,4 +1,20 @@
- :root {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP WITH ADENIKE STORES | Luxury Unisex Fashion Boutique</title>
+    <meta name="description" content="SHOP WITH ADENIKE STORES - Home of luxury unisex fashion in Lagos. Premium tees, vintage wear, and exclusive boutique collections. Shipping nationwide.">
+    <meta name="keywords" content="Adenike Stores, luxury fashion Lagos, unisex clothing, vintage tees, boutique Lagos, fashion store Ojo">
+    <meta name="author" content="Adenike Stores">
+    <meta property="og:title" content="SHOP WITH ADENIKE STORES | Luxury Unisex Fashion">
+    <meta property="og:description" content="Premium unisex fashion boutique in Lagos. Shop tees, vintage wear & luxury collections.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
             --gold: #C9A96E;
             --gold-light: #E8D5A3;
             --dark: #1A1A1A;
@@ -378,11 +394,16 @@
             position: absolute;
             bottom: 1rem;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) translateY(20px);
             display: flex;
             gap: 0.5rem;
-            opacity: 1;
+            opacity: 0;
+            transition: all 0.3s;
             z-index: 5;
+        }
+        .product-card:hover .product-actions {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
         .action-btn {
             width: 40px;
@@ -1315,6 +1336,37 @@
             .stat-item { min-width: 70px; }
             .stat-number { font-size: 1.5rem; }
             .stat-label { font-size: 0.7rem; }
+            /* PRODUCT SCROLL ON MOBILE */
+            .product-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding: 0 1rem 1rem 1rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+                scrollbar-color: var(--gold) var(--light-gray);
+            }
+            .product-grid::-webkit-scrollbar {
+                height: 6px;
+            }
+            .product-grid::-webkit-scrollbar-track {
+                background: var(--light-gray);
+                border-radius: 3px;
+            }
+            .product-grid::-webkit-scrollbar-thumb {
+                background: var(--gold);
+                border-radius: 3px;
+            }
+            .product-card {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+            }
+            .product-actions {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            .product-image { height: 280px; }
         }
         @media (max-width: 480px) {
             .hero-title { font-size: 1.8rem; }
@@ -1327,7 +1379,7 @@
             .stat-item { flex: 1; min-width: 60px; max-width: 80px; }
             .stat-number { font-size: 1.3rem; }
             .stat-label { font-size: 0.65rem; }
-            .product-grid, .category-grid { grid-template-columns: 1fr; }
+            .category-grid { grid-template-columns: 1fr; }
             .about-stats-row { grid-template-columns: 1fr; }
             .instagram-grid { grid-template-columns: repeat(2, 1fr); }
             .hero { padding: 3rem 0; }
@@ -1335,4 +1387,10 @@
             .hero-desc { font-size: 1rem; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .btn { width: 100%; justify-content: center; }
+            /* Product scroll already defined in 768px, just adjust card size */
+            .product-card { flex: 0 0 260px; }
+            .product-image { height: 260px; }
         }
+    </style>
+</head>
+<body>
