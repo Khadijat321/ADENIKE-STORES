@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOP WITH ADENIKE STORES | Luxury Unisex Fashion Boutique</title>
-    <meta name="description" content="SHOP WITH ADENIKE STORES - Home of luxury unisex fashion in Lagos. Premium tees, vintage wear, and exclusive boutique collections. Shipping nationwide.">
-    <meta name="keywords" content="Adenike Stores, luxury fashion Lagos, unisex clothing, vintage tees, boutique Lagos, fashion store Ojo">
-    <meta name="author" content="Adenike Stores">
-    <meta property="og:title" content="SHOP WITH ADENIKE STORES | Luxury Unisex Fashion">
-    <meta property="og:description" content="Premium unisex fashion boutique in Lagos. Shop tees, vintage wear & luxury collections.">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
+  :root {
             --gold: #C9A96E;
             --gold-light: #E8D5A3;
             --dark: #1A1A1A;
@@ -1391,6 +1375,3 @@
             .product-card { flex: 0 0 260px; }
             .product-image { height: 260px; }
         }
-    </style>
-</head>
-<body>
